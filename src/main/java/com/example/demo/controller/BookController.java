@@ -29,7 +29,7 @@ public class BookController {
 	
 	 // 📌 도서 등록 API
     @PostMapping
-    public String insert(Book book) {
+    public String insert(@RequestBody Book book) {
     	dao.save(book);
         return "OK";
     }
